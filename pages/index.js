@@ -4,6 +4,7 @@ import { AiFillHeart, AiFillLike, AiOutlineSafety } from "react-icons/ai";
 import { UserContext } from "../context/context";
 import { BsCardImage } from "react-icons/bs";
 import { FaComment } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Home() {
   const { user } = useContext(UserContext);
@@ -25,7 +26,13 @@ export default function Home() {
                   <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-[#52796F] rounded-full blur-md"></span>
                 </span>
                 <span className="relative flex gap-2 text-white">
-                  <img src={"/google.png"} className="w-7 h-7" /> Start Now
+                  <Image
+                    src={"/google.png"}
+                    width={30}
+                    height={30}
+                    alt="landing button"
+                  />{" "}
+                  Start Now
                 </span>
               </button>
             </Link>
@@ -110,7 +117,13 @@ export default function Home() {
                   <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-[#52796F] rounded-full blur-md"></span>
                 </span>
                 <span className="relative flex gap-2 text-white">
-                  <img src={"/google.png"} className="w-7 h-7" /> Start Now
+                  <Image
+                    src={"/google.png"}
+                    width={30}
+                    height={30}
+                    alt="landing button"
+                  />{" "}
+                  Start Now
                 </span>
               </button>
             </Link>

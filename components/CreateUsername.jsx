@@ -50,6 +50,7 @@ export default function CreateUsername() {
 
   useEffect(() => {
     checkUsername(usernameValue);
+    //eslint-disable-next-line
   }, [usernameValue]);
 
   // UseCallback is needed in order for the whole function to work,
@@ -63,6 +64,7 @@ export default function CreateUsername() {
         setLoading(false);
       }
     }, 500),
+    //eslint-disable-next-line
     []
   );
 

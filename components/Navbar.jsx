@@ -3,6 +3,7 @@ import { SiBloglovin } from "react-icons/si";
 import { UserContext } from "../context/context";
 import { useContext } from "react";
 import SignOutButton from "./SignOutButton";
+import Image from "next/image";
 
 export default function Navbar() {
   const { user, username } = useContext(UserContext);
@@ -39,9 +40,12 @@ export default function Navbar() {
               </Link>
               <SignOutButton />
               <Link href={`/${username}`}>
-                <img
+                <Image
                   src={user?.photoURL}
-                  className="rounded-[50%] w-[50px] h-[50px] cursor-pointer"
+                  className="rounded-[50%] cursor-pointer"
+                  width={50}
+                  height={50}
+                  alt="Nav icon"
                 />
               </Link>
             </>

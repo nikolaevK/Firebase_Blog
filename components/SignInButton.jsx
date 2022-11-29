@@ -1,5 +1,6 @@
 import { auth, googleProvider } from "../firebase/firebase";
 import { signInWithPopup } from "firebase/auth";
+import Image from "next/image";
 
 export default function SignInButton() {
   async function signInWithGoogle() {
@@ -18,7 +19,14 @@ export default function SignInButton() {
           <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-[#52796F] rounded-full blur-md"></span>
         </span>
         <span className="relative flex gap-2 text-white">
-          <img src={"/google.png"} className="w-7 h-7" /> Sign in with Google
+          <Image
+            src={"/google.png"}
+            className="w-auto h-auto"
+            width={30}
+            height={30}
+            alt="signInWithGoogle"
+          />{" "}
+          Sign in with Google
         </span>
       </button>
     </main>
