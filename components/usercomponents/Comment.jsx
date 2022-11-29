@@ -14,6 +14,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
+import Image from "next/image";
 
 export default function Comment({ comment, postRef, slug }) {
   const [admin, setAdmin] = useState(false);
@@ -41,7 +42,13 @@ export default function Comment({ comment, postRef, slug }) {
   return (
     <section className="relative w-[90%] bg-[#cad2c5] mx-auto rounded-md py-4 px-4">
       <div className="flex gap-2 text-[#354f52]">
-        <img src={comment.photoURL} className="h-10 w-10 rounded-full" />
+        <Image
+          height={30}
+          width={30}
+          alt="comment icon"
+          src={comment.photoURL}
+          className="h-10 w-10 rounded-full"
+        />
         <Link href={`/${comment.username}`}>
           <span className="font-bold">@{comment.username}</span> -
         </Link>
@@ -49,7 +56,7 @@ export default function Comment({ comment, postRef, slug }) {
           <span className="text-gray-500">{format(timestamp, "PPp")}</span>
         )}
       </div>
-      <span className="ml-[6%]">{comment.comment}</span>
+      <span className="ml-[3rem]">{comment.comment}</span>
       {admin && (
         <RiDeleteBinLine
           onClick={() => deleteComment(comment.comment)}

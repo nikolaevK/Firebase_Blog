@@ -14,6 +14,7 @@ import {
   setDoc,
   updateDoc,
 } from "firebase/firestore";
+import Image from "next/image";
 
 export default function CommentModal({ isOpen, setIsOpen, post }) {
   const [postsOwnerImage, setPostsOwnerImage] = useState();
@@ -134,7 +135,10 @@ export default function CommentModal({ isOpen, setIsOpen, post }) {
                   <section className="mt-6">
                     <div className="flex gap-2 items-center ml-4 mt-2 text-[#52796f]">
                       <div className="">
-                        <img
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="modal icon"
                           src={postsOwnerImage}
                           className="h-10 w-10 rounded-full"
                         />
@@ -147,7 +151,10 @@ export default function CommentModal({ isOpen, setIsOpen, post }) {
                   </section>
                   <section className="relative mt-4">
                     <div className="flex items-center ml-4 mt-2 text-[#52796f]">
-                      <img
+                      <Image
+                        height={30}
+                        width={30}
+                        alt="comment modal icon"
                         src={user?.photoURL}
                         className="h-10 w-10 rounded-full"
                       />
