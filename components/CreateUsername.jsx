@@ -64,7 +64,6 @@ export default function CreateUsername() {
         setLoading(false);
       }
     }, 500),
-    //eslint-disable-next-line
     []
   );
 
