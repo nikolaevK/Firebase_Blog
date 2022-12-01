@@ -5,7 +5,7 @@ import SignedInCheck from "../../components/admincomponents/SignedInCheck";
 
 export default function PostPage(props) {
   return (
-    <main className="bg-[#CAD2C5] py-[8rem] md:py-[15rem] h-screen">
+    <main className="bg-[#CAD2C5] py-[8rem] md:py-[15rem] min-h-screen h-fit">
       <SignedInCheck>
         <AdminPosts />
         <CreateNewPost />
