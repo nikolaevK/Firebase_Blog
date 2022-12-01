@@ -69,7 +69,7 @@ export default function CreateUsername() {
 
   return (
     !username && (
-      <section className="bg-[#CAD2c5] h-screen py-[40rem]">
+      <section className="bg-[#CAD2c5] h-screen py-[20rem] md:py-[40rem]">
         <form className="flex flex-col" onSubmit={createUser}>
           <input
             className="w-[80%] justify-center text-center m-auto py-2 font-semibold outline-none rounded-md"

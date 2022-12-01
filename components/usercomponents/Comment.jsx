@@ -40,27 +40,32 @@ export default function Comment({ comment, postRef, slug }) {
   }
 
   return (
-    <section className="relative w-[90%] bg-[#cad2c5] mx-auto rounded-md py-4 px-4">
+    <section className="relative w-[100%] md:w-[90%] bg-[#cad2c5] mx-auto rounded-md py-4 px-2 md:px-4">
       <div className="flex gap-2 text-[#354f52]">
         <Image
           height={30}
           width={30}
           alt="comment icon"
           src={comment.photoURL}
-          className="h-10 w-10 rounded-full"
+          className="h-7 w-7 md:h-10 md:w-10 rounded-full"
         />
         <Link href={`/${comment.username}`}>
-          <span className="font-bold">@{comment.username}</span> -
+          <span className="font-bold text-sm md:text-lg">
+            @{comment.username}
+          </span>{" "}
+          -
         </Link>
         {timestamp && (
-          <span className="text-gray-500">{format(timestamp, "PPp")}</span>
+          <span className="text-gray-500 text-sm pt-1 md:pt-0 md:text-lg">
+            {format(timestamp, "PPp")}
+          </span>
         )}
       </div>
-      <span className="ml-[3rem]">{comment.comment}</span>
+      <div className="ml-[3rem] mr-12 break-words">{comment.comment}</div>
       {admin && (
         <RiDeleteBinLine
           onClick={() => deleteComment(comment.comment)}
-          className="absolute top-[40%] right-10 h-5 w-5 cursor-pointer"
+          className="absolute top-[55%] right-6 md:top-[40%] md:right-10 h-5 w-5 cursor-pointer"
         />
       )}
     </section>

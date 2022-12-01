@@ -69,10 +69,12 @@ export default function PostManager() {
   return (
     <main className="w-[90%] min-h-screen m-auto pt-12 pb-12">
       {post && (
-        <div className="flex gap-6 text-[#52796F]">
-          <section className="w-[60vw]">
-            <h1 className="text-[4rem]">{post?.title}</h1>
-            <p className="mb-4">ID: {post?.slug}</p>
+        <div className="flex flex-col items-center md:flex-row md:items-start gap-6 text-[#52796F]">
+          <section className="w-[90vw] md:w-[60vw]">
+            <h1 className="text-4xl mb-2 md:text-[4rem] md:mb-8">
+              {post?.title}
+            </h1>
+            <p className="mb-4 md:mb-0">ID: {post?.slug}</p>
 
             <PostForm
               postRef={postRef}

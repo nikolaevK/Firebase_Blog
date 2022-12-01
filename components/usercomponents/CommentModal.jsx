@@ -122,7 +122,7 @@ export default function CommentModal({ isOpen, setIsOpen, post }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <div className="bg-white h-[20rem] w-[34rem] rounded-xl">
+                <div className="bg-white h-[25rem] md:h-[20rem] w-[34rem] rounded-xl">
                   <section>
                     <div className="flex justify-end pr-4 pt-4">
                       <AiOutlineClose
@@ -133,8 +133,8 @@ export default function CommentModal({ isOpen, setIsOpen, post }) {
                     <div className="border-b-[1.5px] border-[#52796f] mt-4"></div>
                   </section>
                   <section className="mt-6">
-                    <div className="flex gap-2 items-center ml-4 mt-2 text-[#52796f]">
-                      <div className="">
+                    <div className="md:flex gap-2 items-center ml-2 md:ml-4 mt-2 text-[#52796f]">
+                      <div className="flex justify-center">
                         <Image
                           width={30}
                           height={30}
@@ -143,9 +143,9 @@ export default function CommentModal({ isOpen, setIsOpen, post }) {
                           className="h-10 w-10 rounded-full"
                         />
                       </div>
-                      <div className="flex gap-2">
-                        <span className="font-semibold p-0">{`@${postsOwnerUsername}`}</span>
-                        <span>{post?.title}</span>
+                      <div className="flex flex-col md:flex-row md:gap-2">
+                        <span className="font-semibold">{`@${postsOwnerUsername}`}</span>
+                        <span className="text-sm pt-[3px]">{post?.title}</span>
                       </div>
                     </div>
                   </section>

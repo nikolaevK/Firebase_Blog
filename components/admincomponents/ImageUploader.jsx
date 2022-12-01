@@ -51,7 +51,7 @@ export default function ImageUploader() {
   }
 
   return (
-    <div className="my-6 flex justify-between">
+    <div className="mb-4 md:my-6 flex justify-between">
       {uploading && <h3>{progress}%</h3>}
       {!uploading && (
         <>

@@ -8,7 +8,7 @@ export default function SignInButton() {
   }
 
   return (
-    <main className="pt-[15rem] bg-[#cad2c5] h-screen flex justify-center items-center">
+    <main className="md:pt-[15rem] bg-[#cad2c5] h-screen flex justify-center items-center">
       <button
         onClick={signInWithGoogle}
         className="relative items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group"

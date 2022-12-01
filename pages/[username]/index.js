@@ -13,7 +13,7 @@ import { getUserWithUsername, postToJSON } from "../../firebase/firebase";
 
 export default function UserPublishedPostsPage({ user, posts }) {
   return (
-    <main className="h-screen pt-[13rem] bg-[#cad2C5]">
+    <main className="h-screen pt-[8rem] md:pt-[13rem] bg-[#cad2C5]">
       <UserProfile user={user} />
       <UsersPostFeed posts={posts} />
     </main>

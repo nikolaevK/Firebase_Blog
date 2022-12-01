@@ -25,7 +25,7 @@ export default function PostPage({ path, post: Post }) {
   // When like is clicked, firebase is updated so is realtime post that needs to show the like
   const post = realTimePost || Post;
   return (
-    <main className="pt-[15rem] min-h-screen h-full pb-24 bg-[#cad2c5] ">
+    <main className="pt-[8rem] md:pt-[15rem] min-h-screen h-full pb-24 bg-[#cad2c5]">
       <section className="w-[90%] bg-white m-auto rounded-md py-8 px-4 shadow-[20px_20px_60px_#878787]">
         <PostContent post={post} />
         <aside className="flex gap-1 mt-4">

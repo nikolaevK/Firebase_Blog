@@ -51,7 +51,7 @@ export default function BlogsPage({ allPosts }) {
   }
 
   return (
-    <main className="bg-[#CAD2c5] min-h-screen h-full pt-[15rem] pb-24">
+    <main className="bg-[#CAD2c5] min-h-screen h-full pt-[7rem] md:pt-[15rem] pb-24">
       <UserPostFeed posts={posts} />
       <div className="w-[90%] m-auto mt-6">
         {!postsEnd && (
