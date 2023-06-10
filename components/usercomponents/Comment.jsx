@@ -33,8 +33,8 @@ export default function Comment({ comment, postRef, slug }) {
 
     (await getDocs(q)).docs.forEach((doc) => deleteDoc(doc.ref));
 
-    const docRef = doc(db, "users", user.uid, "posts", slug);
-    await updateDoc(docRef, {
+    // const docRef = doc(db, "users", user.uid, "posts", slug);
+    await updateDoc(postRef, {
       commentCount: increment(-1),
     });
   }
